@@ -1,0 +1,14 @@
+name: RussianRoulette
+version: 1.2
+main: net.drinkybird.russianroulette.RoulettePlugin
+api-version: 1.19
+commands:
+  russianroulette:
+    description: Play Russian Roulette
+    usage: /<command>
+    permission: russianroulette.command
+    aliases: [rr]
+permissions:
+  russianroulette.command:
+    description: Allows playing Russian Roulette
+    default: true
