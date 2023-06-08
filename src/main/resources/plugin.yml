@@ -1,7 +1,7 @@
 name: RussianRoulette
 version: 1.2
 main: net.drinkybird.russianroulette.RoulettePlugin
-api-version: 1.19
+api-version: 1.20
 commands:
   russianroulette:
     description: Play Russian Roulette
