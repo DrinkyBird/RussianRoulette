@@ -1,17 +1,17 @@
 name: RussianRoulette
 version: 1.2
 main: net.drinkybird.russianroulette.RoulettePlugin
-api-version: 1.20
+api-version: "1.20"
 commands:
   russianroulette:
     description: Play Russian Roulette
     usage: /<command>
-    permission: russianroulette.command
+    permission: russianroulette.kill
     aliases: [rr]
   banroulette:
     description: Play Ban Roulette
     usage: /<command>
-    permission: banroulette.command
+    permission: russianroulette.ban
     aliases: [br]
 permissions:
   russianroulette.kill:
