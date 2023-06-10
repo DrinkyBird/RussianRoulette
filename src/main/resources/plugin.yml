@@ -8,7 +8,15 @@ commands:
     usage: /<command>
     permission: russianroulette.command
     aliases: [rr]
+  banroulette:
+    description: Play Ban Roulette
+    usage: /<command>
+    permission: banroulette.command
+    aliases: [br]
 permissions:
-  russianroulette.command:
+  russianroulette.kill:
+    description: Allows playing Russian Roulette
+    default: true
+  russianroulette.ban:
     description: Allows playing Russian Roulette
     default: true

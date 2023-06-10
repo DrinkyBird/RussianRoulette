@@ -11,12 +11,19 @@ public class RoulettePlugin extends JavaPlugin {
     @Override
     public void onEnable() {
         this.getCommand("russianroulette").setExecutor(new CommandRussianRoulette(this));
+        this.getCommand("banroulette").setExecutor(new CommandBanRoulette(this));
     }
 
     void bang(final Player player) {
         player.getWorld().playSound(player, Sound.ENTITY_GENERIC_EXPLODE, 0.8f, 1.0f);
         Bukkit.getBanList(BanList.Type.NAME).addBan(player.getName(), "Bang!", null, "RussianRoulette");
         player.kickPlayer("Bang!");
+        Bukkit.broadcastMessage(player.getDisplayName() + ChatColor.RED + " lost a game of Russian Roulette...");
+    }
+
+    void kill(final Player player) {
+        player.getWorld().playSound(player, Sound.ENTITY_GENERIC_EXPLODE, 0.8f, 1.0f);
+        player.setHealth(0.0);
         Bukkit.broadcastMessage(player.getDisplayName() + ChatColor.RED + " lost a game of Russian Roulette...");
     }
 

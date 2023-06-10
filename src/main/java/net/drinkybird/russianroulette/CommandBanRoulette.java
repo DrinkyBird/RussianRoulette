@@ -7,10 +7,10 @@ import org.bukkit.entity.Player;
 
 import java.util.concurrent.ThreadLocalRandom;
 
-public class CommandRussianRoulette implements CommandExecutor {
+public class CommandBanRoulette implements CommandExecutor {
     private final RoulettePlugin plugin;
 
-    CommandRussianRoulette(final RoulettePlugin plugin) {
+    CommandBanRoulette(final RoulettePlugin plugin) {
         this.plugin = plugin;
     }
 
@@ -21,7 +21,7 @@ public class CommandRussianRoulette implements CommandExecutor {
         } else {
             final int r = ThreadLocalRandom.current().nextInt(1, 6);
             if (r == 1) {
-                plugin.kill(player);
+                plugin.bang(player);
             } else {
                 plugin.click(player);
             }
